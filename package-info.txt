@@ -1,0 +1,43 @@
+views - contains the pages of web apps
+components - contains the small view components
+
+# info 
+Hooks is use to use "state" in function
+props - properties of component, cannot be changed
+state - data in the component, can be changed.
+setState - asynchronous method, use to update the value in state and render the component again., have previos state function.
+Destructureing component - taking out values from component. cont {message,errorcode} from this.state or props   .
+Binding Event Handler - this keyword is undefined in clickHandler function. So Event Binding used.
+    #approach 1
+        onClick = {this.clickHandler.bind(this)}
+    #approach 2
+        onClick = {()=>this.clickHandler()}
+    #approach 3
+        constructor() {
+            //add below line to make this work.
+            this.clickHandler = this.clickHandler.bind(this);
+        }
+    #approach 4
+        convert the clickHandler function to ES6 functions
+        clickHandler = () => {
+            
+        }
+
+
+*************************************************
+//Callback function explained
+let add = function(a,b){
+    return a+b;
+}
+let multiply = function(a,b){
+    return a*b;
+}
+let calculate = function(num1,num2,operationFunctionCallback){
+    return operationFunctionCallback(num1,num2);
+}
+//for addtion
+console.log(calculate(2,5,add));
+
+//for multiply
+console.log(calculate(2,5),multiply);
+***************************************************
