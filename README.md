@@ -9,6 +9,7 @@ PHP Satellite Server App : https://github.com/a6h15hek/php-satellite
 Node.js version >= 8.9 is required to run the dashboard.
 
 ## Configure
+In .env file set
 ```
 REACT_APP_PHP_SATELLITE_SERVER_URL=<php-satellite-server-app-url>
 ```
